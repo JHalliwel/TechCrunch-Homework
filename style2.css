@@ -1,0 +1,217 @@
+/* Reset general */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ======== Layout principal ======== */
+#arriba {
+  float: left;
+  width: 15%;
+  border: none;
+  padding: 20px;
+  text-align: left;
+}
+
+#portada {
+  float: left;
+  width: 55%;
+  border: none;
+  padding: 20px;
+}
+
+#derecho {
+  float: left;
+  width: 30%;
+  border: none;
+  padding: 20px;
+}
+
+/* ======== Footer ======== */
+#blanco {
+  float: left;
+  width: 15%;
+  border: none;
+  padding: 20px;
+}
+
+#centro {
+  float: left;
+  width: 30%;
+  border: none;
+  padding: 20px;
+}
+
+#noticia {
+  float: left;
+  width: 30%;
+  border: none;
+  padding: 20px;
+}
+
+#imagenes {
+  float: left;
+  width: 25%;
+  border: none;
+  padding: 20px;
+}
+
+/* ======== Logo ======== */
+#logos {
+  height: 105px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* ======== Navegación ======== */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ======== Imágenes ======== */
+#act {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+#techplus, #tech2 {
+  height: 40px;
+  width: auto;
+  margin: 10px 0;
+}
+
+#img1, #img2, #img3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* ======== Tipografía ======== */
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 26px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+li{
+    font-size: 40px;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 1024px) {
+  #arriba, #portada, #derecho,
+  #blanco, #centro, #noticia, #imagenes {
+    float: none;
+    width: 100%;
+  }
+
+  #logos {
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  #act {
+    width: 100%;
+  }
+}
+/* 1) Comienza el footer en una fila nueva */
+footer { 
+  clear: both;
+}
+
+/* 2) Deja que el contenido determine la altura (evita recortes/espacios raros) */
+#arriba, #portada, #derecho,
+#blanco, #centro, #noticia, #imagenes {
+  height: auto;          /* quita las alturas fijas */
+  min-height: 0;         /* opcional, por si tenías herencias */
+  padding: 20px;         /* da el “aire” con padding, no con height */
+  border: none;          /* si quieres sin bordes como la referencia */
+}
+
+/* 3) Quita los márgenes en % que empujan bloques */
+#specific1, #specific2, #specific3 {
+ /* font-size: 15px;*/
+  margin: 12px 0 18px;   /* usa px/rem en lugar de % */
+  line-height: 1.45;
+}
+
+/* 4) Asegura ancho completo de las imágenes de la columna derecha */
+#img1, #img2, #img3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 16px;
+}
+
+/* 5) Ajustes suaves para el héroe y tipografía */
+#act { 
+  width: 100%; 
+  height: auto; 
+  margin-top: 12px; 
+}
+
+h1 { margin: 0 0 8px; }
+h3 { margin: 10px 0 6px; }
+p  { margin: 4px 0; }
+
+/* 6) (Importante) Corrige el menú: el <a> debe ir dentro del <li>, no al revés */
+ul { list-style: none; margin: 0; padding: 0; }
+ul li { margin: 6px 0; }
+ul li a { text-decoration: none; color: #000; }
+ul li a:hover { text-decoration: underline; }
